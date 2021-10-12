@@ -379,6 +379,7 @@ class DonkeyUnitySimHandler(IMesgHandler):
             "lidar": (self.lidar),
             "car": (self.roll, self.pitch, self.yaw),
             "progess_on_shortest_path" : (self.progress),
+            "on_road" : (self.on_road),
         }
 
         # Add the second image to the dict
@@ -457,7 +458,9 @@ class DonkeyUnitySimHandler(IMesgHandler):
             self.yaw = data["yaw"]
 
         # if "progress_on_shortest_path" in data:
-        self.progress = data["progress_on_shortest_path"]
+        self.progress = data["progress_on_shortest_pathh"]
+        self.on_road = data["on_road"]
+
         # Cross track error not always present.
         # Will be missing if path is not setup in the given scene.
         # It should be setup in the 4 scenes available now.
