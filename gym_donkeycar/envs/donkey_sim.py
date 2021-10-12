@@ -458,7 +458,7 @@ class DonkeyUnitySimHandler(IMesgHandler):
             self.yaw = data["yaw"]
 
         # if "progress_on_shortest_path" in data:
-        self.progress = data["progress_on_shortest_pathhg"]
+        self.progress = data["progress_on_shortest_path"]
         self.on_road = data["on_road"]
 
         # Cross track error not always present.
